@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import tour1 from "@/data/semarang/SM01.json";
 import calculateMiddlePoint from "@/utilities/CalculateCentroid";
 
-function YG02() {
+function SM01() {
   const { location, error } = useCurrentLocation();
   const [centroid, setCentroid] = useState<[number, number]>([0, 0]);
   const chars: string[] = ["", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
@@ -15,8 +15,8 @@ function YG02() {
       position: [item.geometry.coordinates[1], item.geometry.coordinates[0]],
       iconUrl: "/" + chars[index + 1] + ".png",
       iconSize: [25, 25],
-      iconAnchor: [18, 18],
-      popupAnchor: [9, 9],
+      iconAnchor: [25, 25/4],
+      popupAnchor: [12.5, 12.5],
       children: (
         <div className="font-semibold text-[16px] text-white font-poppins w-max bg-[#84899E] p-2 flex gap-[9px]">
           <div className="w-[60px] h-[55px] bg-[#D9D9D9] rounded-[8px]"></div>
@@ -28,15 +28,19 @@ function YG02() {
       ),
       key: item.properties.index,
     };
-    markers.push(marker);
+    if (item.geometry.type === "Point") {
+      markers.push(marker);
+    }
+  });
+  const strokeOnlyGeoJson = tour1.features.filter((feature: any) => {
+    return feature.geometry.type !== "Point";
   });
 
   useEffect(() => {
-    console.log(calculateMiddlePoint(tour1));
     if (centroid[0] === 0 && centroid[1] === 0) {
-      console.log("trigger");
-      setCentroid(calculateMiddlePoint(tour1));
+      setCentroid(calculateMiddlePoint(markers));
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location, centroid]);
   const Map = useMemo(
     () =>
@@ -48,17 +52,17 @@ function YG02() {
   );
   return (
     <main>
-      {/* {location.latitude},&nbsp;{location.longitude} */}
+      {/* <h1 className="bg-white p-10">{location.latitude},&nbsp;{location.longitude}</h1> */}
       <Map
-        geojson={tour1}
+        geojson={strokeOnlyGeoJson}
         center={centroid}
         markers={markers}
-        current={centroid}
+        current={[location.latitude, location.longitude]}
       />
     </main>
   );
 }
 
-export default dynamic(() => Promise.resolve(YG02), {
+export default dynamic(() => Promise.resolve(SM01), {
   ssr: false,
 });

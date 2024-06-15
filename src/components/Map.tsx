@@ -1,4 +1,4 @@
-import { MapContainer, Marker, TileLayer, Tooltip, useMap } from "react-leaflet";
+import { MapContainer, Marker, TileLayer, Tooltip, useMap, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import dynamic from "next/dynamic";
 import { icon, Icon } from "leaflet";
@@ -15,6 +15,7 @@ function Map({
   markers: any;
   current: [number, number];
 }) {
+  // console.log(geojson)
   const RefreshMapCenter = ({ newCenter }: { newCenter: [number, number] }) => {
     const map = useMap();
 
@@ -31,7 +32,7 @@ function Map({
     <section className="w-full h-screen relative">
       <MapContainer
         center={center ?? [-7.801363, 110.364787]}
-        zoom={17}
+        zoom={15}
         scrollWheelZoom={true}
         className="w-full h-full"
       >
@@ -64,7 +65,18 @@ function Map({
               </Marker>
             );
           })}
-          <Marker
+        {geojson && (
+          <GeoJSON
+            data={geojson}
+            style={(feature) => {
+              return {
+                color: feature?.properties?.stroke ?? "#000",
+                weight: 8,
+              };
+            }}
+          />
+        )}
+        <Marker
           position={current}
           icon={new Icon({ iconUrl: "/profile/1.png", iconSize: [50, 50] })}
         />

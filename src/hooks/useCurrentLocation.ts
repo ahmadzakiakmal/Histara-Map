@@ -11,19 +11,22 @@ const useCurrentLocation = () => {
     }
 
     const handleSuccess = (position: any) => {
+      console.log(position.coords)
       setLocation({
         latitude: position.coords.latitude,
         longitude: position.coords.longitude,
       });
     };
 
-    const intervalId = setInterval(() => {
-      navigator.geolocation.getCurrentPosition(handleSuccess, (error) => setError(error.message));
-      // console.log("effect")
-    }, 1000);
+    const handleError = (error: any) => {
+      console.log(error)
+      setError(error.message);
+    };
 
-    // Cleanup function to clear the interval
-    return () => clearInterval(intervalId);
+    const watchId = navigator.geolocation.watchPosition(handleSuccess, handleError);
+
+    // Cleanup function to clear the watcher
+    return () => navigator.geolocation.clearWatch(watchId);
   }, []);
 
   return { location, error };
