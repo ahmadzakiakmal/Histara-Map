@@ -19,6 +19,7 @@ const useCurrentLocation = () => {
     };
 
     const handleError = (error: any) => {
+      alert(error.message)
       console.log(error)
       setError(error.message);
     };
