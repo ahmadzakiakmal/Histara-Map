@@ -4,57 +4,373 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Candi Gunung Sari",
+        "name": "Gerbang Kerkhof",
         "index": 1
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [110.2832397, -7.6021298]
-      }
+        "coordinates": [
+          110.2217575,
+          -7.4892447
+        ]
+      },
+      "id": 0
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Candi Ngawen",
+        "name": "Gereja Kristen Jawa (GKJ) Magelang",
         "index": 2
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [110.2724247, -7.6040311]
-      }
+        "coordinates": [
+          110.2157155,
+          -7.483832
+        ]
+      },
+      "id": 1
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Candi Mendut",
+        "name": "Masjid Agung Magelang (parkir)",
         "index": 3
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [110.2299677, -7.6047436]
-      }
+        "coordinates": [
+          110.2171347,
+          -7.4772337
+        ]
+      },
+      "id": 2
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Candi Pawon",
+        "name": "Alun-alun Magelang - Water Toren",
         "index": 4
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [110.2195272, -7.6061184]
+        "coordinates": [
+          110.2178096,
+          -7.4768235
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Candi Borobudur",
+        "name": "Gereja GPIB Beth-El Magelang",
         "index": 5
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [110.20384249510818, -7.608038633071076]
+        "coordinates": [
+          110.2180238,
+          -7.4760393
+        ]
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Klenteng Liok Hok Bio",
+        "index": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.2191819,
+          -7.4782739
+        ]
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Museum BPK RI",
+        "index": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.2141705,
+          -7.4744902
+        ]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Museum Diponegoro",
+        "index": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.2128036,
+          -7.4747625
+        ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eks Kampus UGM Cabang Magelang",
+        "index": 9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.2115436,
+          -7.4751115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#0e1a4c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.22168183356575,
+            -7.489132106254246
+          ],
+          [
+            110.22146421123477,
+            -7.488096428580519
+          ],
+          [
+            110.2212030644389,
+            -7.4877404138131
+          ],
+          [
+            110.22092015540721,
+            -7.485604319097618
+          ],
+          [
+            110.22068077084492,
+            -7.485366974594612
+          ],
+          [
+            110.21546648690787,
+            -7.486370842251802
+          ],
+          [
+            110.21555353583977,
+            -7.486068767937937
+          ],
+          [
+            110.21593437491902,
+            -7.483867934479633
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#e9945c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.21592029100663,
+            -7.483844337934443
+          ],
+          [
+            110.21716263892449,
+            -7.4800012137903025
+          ],
+          [
+            110.21723854240179,
+            -7.47821946518151
+          ],
+          [
+            110.21742489458836,
+            -7.477739070321576
+          ],
+          [
+            110.21744974154734,
+            -7.477307946280192
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#0e1a4c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.2174621629124,
+            -7.477283310062617
+          ],
+          [
+            110.21753670378774,
+            -7.476815232022673
+          ],
+          [
+            110.21758639770422,
+            -7.476470332094536
+          ],
+          [
+            110.21808333687198,
+            -7.4763594713438835
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#e9945c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.2180705999595,
+            -7.47633452488634
+          ],
+          [
+            110.21884085566734,
+            -7.476322207022534
+          ],
+          [
+            110.21928810091725,
+            -7.478256107334289
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#0e1a4c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.21909148130129,
+            -7.477846273801276
+          ],
+          [
+            110.21886785867639,
+            -7.477907862900352
+          ],
+          [
+            110.2142587479047,
+            -7.476959389813359
+          ],
+          [
+            110.21434571225831,
+            -7.474582039123888
+          ],
+          [
+            110.214175751823,
+            -7.47457543064499
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#e9945c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.21418189891472,
+            -7.474572060769077
+          ],
+          [
+            110.21327211071599,
+            -7.474539018370379
+          ],
+          [
+            110.21310215028308,
+            -7.474505975969194
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#0e1a4c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.21309651916488,
+            -7.4745019056335735
+          ],
+          [
+            110.21265808993786,
+            -7.4745019056335735
+          ],
+          [
+            110.2125850184018,
+            -7.4749831846062165
+          ],
+          [
+            110.21253804384139,
+            -7.47503493500183
+          ],
+          [
+            110.2121987084065,
+            -7.475048343752249
+          ],
+          [
+            110.21208649140169,
+            -7.475113031736157
+          ],
+          [
+            110.21201602956211,
+            -7.475260520303166
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 15
     }
   ]
 }
+

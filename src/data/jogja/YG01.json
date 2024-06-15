@@ -5,7 +5,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [110.3777906951027, -7.783507314574553]
+        "coordinates": [
+          110.3777906951027,
+          -7.783507314574553
+        ]
       },
       "properties": {
         "name": "Rumah Sakit Bethesda",
@@ -16,7 +19,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [110.3768441, -7.7860679]
+        "coordinates": [
+          110.3768441,
+          -7.7860679
+        ]
       },
       "properties": {
         "name": "Rumah Sakit DKT. Dr. Soetarto",
@@ -27,7 +33,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [110.3766597, -7.7868186]
+        "coordinates": [
+          110.3766597,
+          -7.7868186
+        ]
       },
       "properties": {
         "name": "SMA Bopkri 1 Yogyakarta",
@@ -38,18 +47,25 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [110.37631549685648, -7.787672298425395]
+        "coordinates": [
+          110.37631549685648,
+          -7.787672298425395
+        ]
       },
       "properties": {
         "name": "Asrama Kompi Kotabaru",
         "index": 4
-      }
+      },
+      "id": 3
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [110.3755527, -7.7873757]
+        "coordinates": [
+          110.3755527,
+          -7.7873757
+        ]
       },
       "properties": {
         "name": "SMP Negeri 5 Yogyakarta",
@@ -60,29 +76,40 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [110.3721449, -7.7867987]
+        "coordinates": [
+          110.3721449,
+          -7.7867987
+        ]
       },
       "properties": {
         "name": "Babon Aniem",
         "index": 6
-      }
+      },
+      "id": 5
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [110.3711200, -7.7863250]
+        "coordinates": [
+          110.37112,
+          -7.786325
+        ]
       },
       "properties": {
         "name": "SDN Unggaran 1",
         "index": 7
-      }
+      },
+      "id": 6
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [110.3693527, -7.7863340]
+        "coordinates": [
+          110.3693527,
+          -7.786334
+        ]
       },
       "properties": {
         "name": "Masjid Syuhada",
@@ -93,12 +120,277 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [110.3711706, -7.7846132]
+        "coordinates": [
+          110.3711706,
+          -7.7846132
+        ]
       },
       "properties": {
         "name": "Museum Sandi",
         "index": 9
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#0e1a4c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.37744273873466,
+            -7.782990188355356
+          ],
+          [
+            110.37494905142188,
+            -7.782961459101585
+          ],
+          [
+            110.37461559323481,
+            -7.785087418513811
+          ],
+          [
+            110.37607990962147,
+            -7.785360344954796
+          ],
+          [
+            110.37602191689359,
+            -7.786035478016942
+          ],
+          [
+            110.37679032054132,
+            -7.786222216757125
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#e9945c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.37677773035114,
+            -7.786246602503695
+          ],
+          [
+            110.37681090407477,
+            -7.786347945106243
+          ],
+          [
+            110.37661739068682,
+            -7.786761532231836
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#0e1a4c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.37661755243909,
+            -7.78675742176344
+          ],
+          [
+            110.37624218672124,
+            -7.7875134137398305
+          ],
+          [
+            110.37629970445596,
+            -7.78767560825213
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#e9945c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.37624218672124,
+            -7.787517797375784
+          ],
+          [
+            110.3760430868665,
+            -7.78759231918626
+          ],
+          [
+            110.37554754945114,
+            -7.787443275551979
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#0e1a4c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.37552618662505,
+            -7.787434967634297
+          ],
+          [
+            110.3752748198259,
+            -7.78740875199199
+          ],
+          [
+            110.3749705337006,
+            -7.78819522053054
+          ],
+          [
+            110.37463317299648,
+            -7.78854257699868
+          ],
+          [
+            110.37389891734705,
+            -7.788529469212364
+          ],
+          [
+            110.37328373018005,
+            -7.788254205612091
+          ],
+          [
+            110.37319773627524,
+            -7.787579153633715
+          ],
+          [
+            110.37319773627524,
+            -7.786858223136406
+          ],
+          [
+            110.37244363587877,
+            -7.787008963252063
+          ],
+          [
+            110.3721327348369,
+            -7.786871330974975
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#e9945c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.37212435373897,
+            -7.786856629891076
+          ],
+          [
+            110.37208805943828,
+            -7.786784710624573
+          ],
+          [
+            110.37224879134499,
+            -7.786692242978859
+          ],
+          [
+            110.37193251243133,
+            -7.785993597885096
+          ],
+          [
+            110.37111329819612,
+            -7.786322372192004
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#0e1a4c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.37110280192508,
+            -7.7863223700788495
+          ],
+          [
+            110.36997277376219,
+            -7.786774156356316
+          ],
+          [
+            110.36975500795131,
+            -7.787015599564043
+          ],
+          [
+            110.36955798174381,
+            -7.786291269525577
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#e9945c",
+        "stroke-width": 10,
+        "stroke-opacity": 1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            110.36955798160773,
+            -7.786275858193136
+          ],
+          [
+            110.36954761180596,
+            -7.785633720563311
+          ],
+          [
+            110.37095790466788,
+            -7.784416224915674
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 16
     }
   ]
 }
+
+
