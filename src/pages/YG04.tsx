@@ -66,6 +66,7 @@ function YG04() {
     <main>
       {/* <h1 className="bg-white p-10">{location.latitude},&nbsp;{location.longitude}</h1> */}
       <Map
+image="1"
         geojson={strokeOnlyGeoJson}
         center={centroid}
         markers={markers}
