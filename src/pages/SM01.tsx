@@ -19,7 +19,7 @@ function SM01() {
       popupAnchor: [12.5, 12.5],
       children: (
         <div className="font-semibold text-[16px] text-white font-poppins w-max bg-[#84899E] p-2 flex gap-[9px]">
-          <div className="w-[60px] h-[55px] bg-[#D9D9D9] rounded-[8px]"></div>
+          <div className="w-[90px] h-[75px] bg-[#D9D9D9] rounded-[8px]"></div>
           <p className="max-w-[120px] text-balance">{item.properties.name}</p>
           <div className="bg-white rounded-full text-black self-start size-[30px] flex justify-center items-center">
             {chars[item.properties.index]}
