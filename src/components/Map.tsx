@@ -9,11 +9,13 @@ function Map({
   center,
   markers,
   current,
+  image = "1",
 }: {
   geojson: any;
   center: [number, number];
   markers: any;
   current: [number, number];
+  image: string;
 }) {
   const RefreshMapCenter = ({ newCenter }: { newCenter: [number, number] }) => {
     const map = useMap();
@@ -76,8 +78,13 @@ function Map({
           />
         )}
         <Marker
-          position={(current[0] !== 0 && current[1] !== 0) ? current : center}
-          icon={new Icon({ iconUrl: "/profile/1.png", iconSize: [50, 50] })}
+          position={current[0] !== 0 && current[1] !== 0 ? current : center}
+          icon={
+            new Icon({
+              iconUrl: `/profile/${["1", "2", "3", "4"].includes(image) ? image : "1"}.png`,
+              iconSize: [50, 50],
+            })
+          }
         />
       </MapContainer>
     </section>

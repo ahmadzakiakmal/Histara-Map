@@ -4,13 +4,15 @@ import React, { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import tour1 from "@/data/jogja/YG01.json";
 import calculateMiddlePoint from "@/utilities/CalculateCentroid";
+import { useRouter } from "next/router";
 
 function YG01() {
   const { location, error } = useCurrentLocation();
   const [centroid, setCentroid] = useState<[number, number]>([0, 0]);
   const chars: string[] = ["", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
-
-  console.log("http://localhost:3000/images/" + "YG01-01.png");
+  const router = useRouter();
+  const { image } = router.query;
+  console.log(image)
 
   const markers: object[] = [];
   tour1.features.forEach((item: any, index: number) => {
@@ -23,12 +25,18 @@ function YG01() {
       children: (
         <div className="font-semibold text-[16px] text-white font-poppins w-max bg-[#84899E] p-2 flex gap-[9px]">
           <div className="w-[90px] h-[75px] bg-[#D9D9D9] rounded-[8px] overflow-hidden  relative justify-center items-center">
-            <img 
+            <img
               className="absolute h-full"
               src={
                 process.env.NEXT_PUBLIC_ENV === "DEV"
-                  ? "http://localhost:3000/images/YG01-" + (item.properties.index < 10 ? "0" : "") + item.properties.index + ".png"
-                  : "https://histara-map.vercel.app/images/YG01-" + (item.properties.index < 10 ? "0" : "") + item.properties.index + ".png"
+                  ? "http://localhost:3000/images/YG01-" +
+                    (item.properties.index < 10 ? "0" : "") +
+                    item.properties.index +
+                    ".png"
+                  : "https://histara-map.vercel.app/images/YG01-" +
+                    (item.properties.index < 10 ? "0" : "") +
+                    item.properties.index +
+                    ".png"
               }
               // src="https://drive.google.com/uc?export=view&id=1dhy2mj-fc30pPB2giZ_ztvSCINf88FuD"
               alt={"Photo of " + item.properties.name}
@@ -72,6 +80,7 @@ function YG01() {
         center={centroid}
         markers={markers}
         current={[location.latitude, location.longitude]}
+        image={image as string}
       />
     </main>
   );
