@@ -11,8 +11,8 @@ function YG01() {
   const [centroid, setCentroid] = useState<[number, number]>([0, 0]);
   const chars: string[] = ["", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
   const router = useRouter();
-  const { image } = router.query;
-  console.log(image)
+  const { image, latitude, longitude } = router.query;
+  console.log(image);
 
   const markers: object[] = [];
   tour1.features.forEach((item: any, index: number) => {
@@ -79,7 +79,10 @@ function YG01() {
         geojson={strokeOnlyGeoJson}
         center={centroid}
         markers={markers}
-        current={[location.latitude, location.longitude]}
+        current={[
+          isNaN(Number(latitude)) ? location.latitude : Number(latitude),
+          isNaN(Number(longitude)) ? location.longitude : Number(longitude) ?? 0,
+        ]}
         image={image as string}
       />
     </main>
