@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import useCurrentLocation from "@/hooks/useCurrentLocation";
 import React, { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
@@ -19,7 +20,17 @@ function MG01() {
       popupAnchor: [12.5, 12.5],
       children: (
         <div className="font-semibold text-[16px] text-white font-poppins w-max bg-[#84899E] p-2 flex gap-[9px]">
-          <div className="w-[60px] h-[55px] bg-[#D9D9D9] rounded-[8px]"></div>
+          <div className="w-[120px] bg-[#D9D9D9] rounded-[8px] overflow-hidden">
+            <img
+              src={
+                process.env.NEXT_PUBLIC_ENV === "DEV"
+                  ? "http://localhost:3000/images/MG01-" + (item.properties.index < 10 ? "0" : "") + item.properties.index + ".png"
+                  : "https://histara-map.vercel.app/images/MG01-" + (item.properties.index < 10 ? "0" : "") + item.properties.index + ".png"
+              }
+              // src="https://drive.google.com/uc?export=view&id=1dhy2mj-fc30pPB2giZ_ztvSCINf88FuD"
+              alt={"Photo of " + item.properties.name}
+            />
+          </div>
           <p className="max-w-[120px] text-balance">{item.properties.name}</p>
           <div className="bg-white rounded-full text-black self-start size-[30px] flex justify-center items-center">
             {chars[item.properties.index]}
