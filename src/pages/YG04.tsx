@@ -4,11 +4,14 @@ import React, { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import tour1 from "@/data/jogja/YG04.json";
 import calculateMiddlePoint from "@/utilities/CalculateCentroid";
+import { useRouter } from "next/router";
 
 function YG04() {
   const { location, error } = useCurrentLocation();
   const [centroid, setCentroid] = useState<[number, number]>([0, 0]);
   const chars: string[] = ["", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
+  const router = useRouter();
+  const { image, latitude, longitude } = router.query;
 
   const markers: object[] = [];
   tour1.features.forEach((item: any, index: number) => {
@@ -16,17 +19,23 @@ function YG04() {
       position: [item.geometry.coordinates[1], item.geometry.coordinates[0]],
       iconUrl: "/" + chars[index + 1] + ".png",
       iconSize: [25, 25],
-      iconAnchor: [25, 25/4],
+      iconAnchor: [25, 25 / 4],
       popupAnchor: [12.5, 12.5],
       children: (
         <div className="font-semibold text-[16px] text-white font-poppins w-max bg-[#84899E] p-2 flex gap-[9px]">
           <div className="w-[90px] h-[75px] bg-[#D9D9D9] rounded-[8px] overflow-hidden  relative justify-center items-center">
-            <img 
-              className="absolute h-full min-w-[90px] min-w-[90px]"
+            <img
+              className="absolute h-full min-w-[90px]"
               src={
                 process.env.NEXT_PUBLIC_ENV === "DEV"
-                  ? "http://localhost:3000/images/YG04-" + (item.properties.index < 10 ? "0" : "") + item.properties.index + ".png"
-                  : "https://histara-map.vercel.app/images/YG04-" + (item.properties.index < 10 ? "0" : "") + item.properties.index + ".png"
+                  ? "http://localhost:3000/images/YG04-" +
+                    (item.properties.index < 10 ? "0" : "") +
+                    item.properties.index +
+                    ".png"
+                  : "https://histara-map.vercel.app/images/YG04-" +
+                    (item.properties.index < 10 ? "0" : "") +
+                    item.properties.index +
+                    ".png"
               }
               // src="https://drive.google.com/uc?export=view&id=1dhy2mj-fc30pPB2giZ_ztvSCINf88FuD"
               alt={"Photo of " + item.properties.name}
@@ -52,7 +61,7 @@ function YG04() {
     if (centroid[0] === 0 && centroid[1] === 0) {
       setCentroid(calculateMiddlePoint(markers));
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location, centroid]);
   const Map = useMemo(
     () =>
@@ -66,11 +75,14 @@ function YG04() {
     <main>
       {/* <h1 className="bg-white p-10">{location.latitude},&nbsp;{location.longitude}</h1> */}
       <Map
-image="1"
         geojson={strokeOnlyGeoJson}
         center={centroid}
         markers={markers}
-        current={[location.latitude, location.longitude]}
+        current={[
+          isNaN(Number(latitude)) ? location.latitude : Number(latitude),
+          isNaN(Number(longitude)) ? location.longitude : Number(longitude),
+        ]}
+        image={image as string}
       />
     </main>
   );

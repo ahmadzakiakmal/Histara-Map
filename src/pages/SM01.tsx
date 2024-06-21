@@ -4,11 +4,14 @@ import React, { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import tour1 from "@/data/semarang/SM01.json";
 import calculateMiddlePoint from "@/utilities/CalculateCentroid";
+import { useRouter } from "next/router";
 
 function SM01() {
   const { location, error } = useCurrentLocation();
   const [centroid, setCentroid] = useState<[number, number]>([0, 0]);
   const chars: string[] = ["", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
+  const router = useRouter();
+  const { image, latitude, longitude } = router.query;
 
   const markers: object[] = [];
   tour1.features.forEach((item: any, index: number) => {
@@ -72,11 +75,14 @@ function SM01() {
     <main>
       {/* <h1 className="bg-white p-10">{location.latitude},&nbsp;{location.longitude}</h1> */}
       <Map
-        image="1"
         geojson={strokeOnlyGeoJson}
         center={centroid}
         markers={markers}
-        current={[location.latitude, location.longitude]}
+        current={[
+          isNaN(Number(latitude)) ? location.latitude : Number(latitude),
+          isNaN(Number(longitude)) ? location.longitude : Number(longitude),
+        ]}
+        image={image as string}
       />
     </main>
   );

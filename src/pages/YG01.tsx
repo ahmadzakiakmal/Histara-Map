@@ -12,7 +12,6 @@ function YG01() {
   const chars: string[] = ["", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
   const router = useRouter();
   const { image, latitude, longitude } = router.query;
-  console.log(image);
 
   const markers: object[] = [];
   tour1.features.forEach((item: any, index: number) => {
@@ -81,7 +80,7 @@ function YG01() {
         markers={markers}
         current={[
           isNaN(Number(latitude)) ? location.latitude : Number(latitude),
-          isNaN(Number(longitude)) ? location.longitude : Number(longitude) ?? 0,
+          isNaN(Number(longitude)) ? location.longitude : Number(longitude),
         ]}
         image={image as string}
       />
