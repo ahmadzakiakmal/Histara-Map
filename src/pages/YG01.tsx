@@ -26,7 +26,7 @@ function YG01() {
         <div className="font-semibold text-[16px] text-white font-poppins w-max bg-[#84899E] p-2 flex gap-[9px]">
           <div className="w-[90px] h-[75px] bg-[#D9D9D9] rounded-[8px] overflow-hidden  relative justify-center items-center">
             <img
-              className="absolute h-full"
+              className="absolute h-full min-w-[90px]"
               src={
                 process.env.NEXT_PUBLIC_ENV === "DEV"
                   ? "http://localhost:3000/images/YG01-" +
